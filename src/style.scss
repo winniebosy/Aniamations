@@ -1,0 +1,46 @@
+@import "compass/css3";
+@import "compass/css3/animation";
+@import "compass/css3/filter";
+
+$bg-color:black;
+$text-color:white;
+  
+  
+body{
+  background:$bg-color;
+  color: $text-color;
+  text-align:center;
+    }
+.container{
+  max-width:100%;
+  height:auto;
+}
+
+ 
+   @include keyframes(bubble){
+  0% {
+  	@include transform( scale(2.0) );
+  }
+   50% {
+  	@include transform( scale(1.5) );
+  }
+     75% {
+  	@include transform( scale(1.0) );
+  }
+  100% {
+    @include transform( scale(0.0) );
+  }
+
+}
+
+.container{
+  @include animation(bubble 12s normal 1s infinite);
+  
+    
+  }
+ 
+ 
+
+
+
+
